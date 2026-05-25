@@ -1,0 +1,139 @@
+aid: voi-app
+name: Voi
+description: >-
+  Voi Technology is a Stockholm-based shared micromobility operator
+  founded in August 2018 by Fredrik Hjelm, Adam Jafer, Filip Lindvall, and
+  Douglas Stark. The company runs Europe's largest shared e-scooter and
+  e-bike fleet, with 150,000+ vehicles deployed across 110+ towns and
+  cities in 13 European countries, serving 8+ million riders who have
+  completed 400+ million trips. Voi has been EBIT-profitable since 2024
+  and in 2026 unveiled a refreshed vehicle family including a new
+  e-scooter model and two upgraded e-bikes, with first deployments in
+  Stockholm. Voi exposes a public Partner API surface (MaaS Light and
+  MaaS Pro) and standards-based open mobility feeds — GBFS v2/v3 for
+  vehicle locations and system information, and MDS 0.4 for trips, status
+  changes, and events — used by cities and MaaS aggregators across
+  Europe. The Partner API also covers user registration, rental
+  lifecycle (start/end), vehicle and zone discovery, pricing, payments,
+  deeplinks, asset access, and customer support flows. Voi additionally
+  publishes a GitHub organization (github.com/voiapp) hosting partner
+  API docs, an iOS networking layer, a VIPER framework, an MDS fork, and
+  internal tooling.
+type: Index
+position: Provider
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Micromobility
+  - Shared Mobility
+  - E-Scooters
+  - E-Bikes
+  - Transportation
+  - MaaS
+  - Mobility As A Service
+  - GBFS
+  - MDS
+  - Open Mobility
+  - Smart Cities
+  - Sweden
+  - Europe
+url: https://raw.githubusercontent.com/api-evangelist/voi-app/refs/heads/main/apis.yml
+created: '2026-05-25'
+modified: '2026-05-25'
+specificationVersion: '0.20'
+apis:
+  - aid: voi-app:voi-maas-light-api
+    name: Voi MaaS Light API
+    description: >-
+      Voi's read-only open mobility API surface, exposing GBFS v2/v3
+      auto-discovery, system information, free bike status (with optional
+      battery extension), and service areas, plus MDS 0.4 trips,
+      status_changes, and events endpoints for historical and near
+      real-time vehicle data. Authenticated via OAuth 2.0 client
+      credentials at mds.voiapp.io/token. Used by cities, regulators,
+      and MaaS aggregators to monitor Voi's fleet across European
+      markets.
+    humanURL: https://docs.voiscooters.com/maas-light/
+    tags:
+      - GBFS
+      - MDS
+      - Micromobility
+      - Open Mobility
+    properties:
+      - url: https://docs.voiscooters.com/maas-light/
+        type: Documentation
+      - url: https://api.voiapp.io/gbfs/v2/gbfs.json
+        type: BaseURL
+      - url: https://mds.voiapp.io/
+        type: BaseURL
+      - url: https://api.voiapp.io/gbfs/v2/gbfs.json
+        type: GBFS
+      - url: https://github.com/MobilityData/gbfs/blob/master/systems.csv
+        type: Registry
+  - aid: voi-app:voi-maas-pro-api
+    name: Voi MaaS Pro API
+    description: >-
+      Voi's commercial Partner API enabling MaaS partners to embed full
+      ride journeys in their apps — register users, start and end
+      rentals, look up active and historical rentals for a user,
+      discover available vehicles by zone or scooter code, retrieve
+      per-vehicle pricing, and read zone definitions (parking,
+      slow-zones, operations). Authenticated via X-Auth-Token header
+      tokens issued at partner onboarding.
+    humanURL: https://github.com/voiapp/partner-api-docs/blob/gh-pages/maas-pro.md
+    tags:
+      - MaaS
+      - Partner API
+      - Rentals
+      - Vehicles
+      - Pricing
+      - Zones
+    properties:
+      - url: https://github.com/voiapp/partner-api-docs/blob/gh-pages/maas-pro.md
+        type: Documentation
+      - url: https://partners.voiapp.io/v1/
+        type: BaseURL
+      - url: https://github.com/voiapp/partner-api-docs
+        type: SourceCode
+common:
+  - type: Website
+    url: https://www.voi.com
+  - type: Portal
+    url: https://docs.voiscooters.com/
+  - type: Documentation
+    url: https://github.com/voiapp/partner-api-docs
+  - type: GitHubOrganization
+    url: https://github.com/voiapp
+  - type: SourceCode
+    url: https://github.com/voiapp/mobility-data-specification
+  - type: Company
+    url: https://www.voi.com/about
+  - type: About
+    url: https://careers.voi.com/pages/our-voiage-so-far
+  - type: Careers
+    url: https://careers.voi.com/
+  - type: PressRoom
+    url: https://www.voi.com/newsroom
+  - type: Blog
+    url: https://www.voi.com/blog
+  - type: Help
+    url: https://www.voi.com/support
+  - type: Contact
+    url: https://www.voi.com/contact
+  - type: TermsOfService
+    url: https://www.voi.com/legal/terms-and-conditions
+  - type: PrivacyPolicy
+    url: https://www.voi.com/legal/privacy-notice
+  - type: Crunchbase
+    url: https://www.crunchbase.com/organization/voi-technology
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/voi-technology/
+  - type: Twitter
+    url: https://twitter.com/voiscooters
+  - type: Instagram
+    url: https://www.instagram.com/voiscooters/
+  - type: YouTube
+    url: https://www.youtube.com/@VoiTechnology
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
