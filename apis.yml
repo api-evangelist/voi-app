@@ -96,6 +96,8 @@ apis:
       - url: https://github.com/voiapp/partner-api-docs
         type: SourceCode
 common:
+  - type: DomainSecurity
+    url: security/voi-app-domain-security.yml
   - type: Website
     url: https://www.voi.com
   - type: Portal
